@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "ChatGPT to Google Docs Exporter",
+    "version": "1.0",
+    "description": "Automatically copies the ChatGPT conversation to a new Google Doc.",
+    "permissions": [
+      "scripting",
+      "activeTab",
+      "clipboardWrite"
+    ],
+    "host_permissions": [
+      "https://chat.openai.com/*",
+      "https://docs.google.com/*"
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_title": "Export ChatGPT Conversation"
+    },
+    "background": {
+      "service_worker": "background.js"
+    }
+  }
+  
+  

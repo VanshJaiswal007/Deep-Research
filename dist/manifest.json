@@ -6,7 +6,8 @@
     "permissions": [
       "scripting",
       "activeTab",
-      "clipboardWrite"
+      "clipboardWrite",
+      "notifications"
     ],
     "host_permissions": [
       "https://chat.openai.com/*",
@@ -16,6 +17,11 @@
       "default_popup": "popup.html",
       "default_title": "Export ChatGPT Conversation"
     },
+    "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
     "background": {
       "service_worker": "background.js"
     }

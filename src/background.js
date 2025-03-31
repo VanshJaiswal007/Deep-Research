@@ -69,11 +69,11 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       chatText = lines.join("\n\n");
     } 
     else if (hostname.includes("perplexity.ai")) {
-        const contentDiv = document.querySelector("div.prose.text-pretty.inline.leading-normal.break-words");
+        const contentDivs = document.querySelectorAll("div.prose.text-pretty.inline.leading-normal.break-words");
+
+        if (!contentDivs.length) return "No chat content found.";
     
-        if (!contentDiv) return "No chat content found.";
-    
-        chatText = contentDiv.innerText.trim();
+        chatText = Array.from(contentDivs).map(div => div.innerText.trim()).join("\n\n");
         //chatText = lines.join("\n\n");
     }
   
